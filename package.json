@@ -1,0 +1,37 @@
+{
+  "name": "inter-pol",
+  "version": "1.0.0",
+  "description": "Safe Internet for everyone!",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "parcel build src/* -d dist/src/"
+  },
+  "author": {
+    "name": "Navendu Pottekkat",
+    "email": "navendupottekkat@gmail.com",
+    "url": "http://navendu.me"
+  },
+  "contributors": [
+    {
+      "name": "Abhiram Melattur"
+    },
+    {
+      "name": "Shibin B Shaji"
+    }
+  ],
+  "homepage": "https://github.com/HacKP-CyberDome/inter-pol-web",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.0.1",
+    "nsfwjs": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}

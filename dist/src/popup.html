@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>InterPol</title>
+  <!-- <base href="./"> -->
+</head>
+<style type="text/css">
+  body {
+    min-width: 300px;
+    max-width: 100%;
+    min-height: 200px;
+    position: relative;
+    vertical-align: middle;
+    background-size: 100% 100%;
+    background-image: url('../images/bg.jpg');
+  }
+
+  h1.show {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 2px;
+    width: 200px;
+    height: auto;
+  }
+  div.indi {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    text-align: center;
+  }
+  span.tooltiptext{
+    font-weight: bold;
+    color: #e2cc03;
+    background-color:  #2b2b2b;
+    border-radius: 10px;
+    padding: 3px;
+    font-size: 15px;
+    visibility: hidden;
+  }
+  a{
+    text-decoration: none;
+  }
+</style>
+
+<body>
+  <div class="indi">
+    <span class="tooltiptext" id="ttp">Why am I seeing this?</span>
+    <a href="">
+      <h1 class="show" id="safe">error</h1></a>
+  </div>
+</body>
+<script src="popup.js"></script>
+
+
+
+</html>
+
