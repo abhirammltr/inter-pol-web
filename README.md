@@ -28,28 +28,81 @@ INTER-POL's web extension offers the user real-time protection without compromis
 
 This can reduce the manual labour of the police force by "decentralising" the task of policing and make people more involved in the process.
 
-Taking it ahead
 
-Some of the plans we did not have time to implement and that we could implement in the future.
+# Installation
+[(Back to top)](#table-of-contents)
 
-    AI to detect fake(photoshopped) images- This would ensure that fake images that can cause serious issues are not spread across social media. People can see if the image has been doctored and can report it to the police. This can enable the police to take action rapidly.
+These instructions are for **developers**.
 
-    Web app for police- The extension works on the user's end. But what if we could monitor the social media sites for such content? An automated web app that can check through social media sites and report malicious content automatically using Computer Vision and NLP models.
+You can download for use directly from [**chrome.google.com/webstore/nsfw-filter**](https://chrome.google.com/webstore/detail/nsfw-filter/kmgagnlkckiamnenbpigfaljmanlbbhh) and [**addons.mozilla/nsfw-filter**](https://addons.mozilla.org/en-US/firefox/addon/nsfw-filter/).
 
-    Fake News detection- Fake news spreads faster than a wildfire. What if we can check text in social media posts and check if they are authentic? Some contraints found on this is that there is now extensive research going on in processing of native languages like Malayalam.
+Clone this repository and navigate inside the project folder and install the dependencies by running:
 
-Installation and Usage
-
-Clone the repo and in the folder run:
-
+```
 npm ci
+```
 
-After the dependencies have been installed run:
+After installing the dependencies, build the project by executing:
 
+```
 npm run build
+```
 
-After you have finished the Installation, open Google Chrome and open the Extension Management page by navigating to chrome://extensions or by opening Settings and clicking Extensions from the bottom left.
+### Adding to Chrome
+[(Back to top)](#table-of-contents)
+
+To install the developer version follow the steps below. To just use the extension download from [**chrome.google.com/webstore/nsfw-filter**](https://chrome.google.com/webstore/detail/nsfw-filter/kmgagnlkckiamnenbpigfaljmanlbbhh)
+
+After you have finished the [Installation](#installation), open Google Chrome and open the Extension Management page by navigating to ```chrome://extensions``` or by opening Settings and clicking Extensions from the bottom left.
 
 Enable Developer Mode by clicking the toggle switch next to Developer mode.
 
-Click the LOAD UNPACKED button and select the extension directory(.../dist).
+Click the LOAD UNPACKED button and select the extension directory(```.../dist```).
+
+<img src="./demo/images/install_instructions.png" alt="Install Instructions">
+
+Voila! The extension is now installed and ready to be used!
+
+### Adding to Firefox
+[(Back to top)](#table-of-contents)
+
+To install the developer version follow the steps below. To just use the extension download from [**addons.mozilla/nsfw-filter**](https://addons.mozilla.org/en-US/firefox/addon/nsfw-filter/)
+
+After finishing [Installation](#installation), open Firefox and open the Debug Add-ons page by navigating to ```about:debugging#/runtime/this-firefox``` or by selecting it from Settings dropdown in the add-ons page.
+
+Click Load Temporary Add-on and select the ```manifest.json``` file from the ```.../dist``` directory.
+
+<img src="./demo/images/install_instructions_firefox.png" alt="Install Instructions">
+
+That's it! The extension is now ready to be used in Firefox!
+
+# Usage
+
+After adding the extension to Chrome/Firefox, it will light-up everytime you load a compatable website.
+
+When a page is loaded, the extension would check for images as you scroll across the page and runs the images through the algorithm and if NSFW images are found, it is hidden automatically.
+
+You can toggle(off/on) the extension from the ```chrome://extensions``` page in Chrome and ```about:debugging#/runtime/this-firefox``` in Firefox.
+
+# Development
+[(Back to top)](#table-of-contents)
+
+
+By default the code runs in production mode. This can be disabled during development by commenting out ```tf.enableProdMode ()``` in the ```/src/background.js``` file. This is enabled by default to improve the performance.
+
+### Dependencies
+[(Back to top)](#table-of-contents)
+
+```
+"@tensorflow/tfjs": "^2.0.1",
+"nsfwjs": "^2.2.0"
+```
+
+**devDependencies**
+
+```
+"parcel-bundler": "^1.12.4"
+```
+
+Run ```npm i``` to install the dependencies.
+
