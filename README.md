@@ -30,7 +30,6 @@ This can reduce the manual labour of the police force by "decentralising" the ta
 
 
 # Installation
-[(Back to top)](#table-of-contents)
 
 These instructions are for **developers**.
 
@@ -49,22 +48,19 @@ npm run build
 ```
 
 ### Adding to Chrome
-[(Back to top)](#table-of-contents)
 
 To install the developer version follow the steps below. To just use the extension download from [**chrome.google.com/webstore/nsfw-filter**](https://chrome.google.com/webstore/detail/nsfw-filter/kmgagnlkckiamnenbpigfaljmanlbbhh)
 
-After you have finished the [Installation](#installation), open Google Chrome and open the Extension Management page by navigating to ```chrome://extensions``` or by opening Settings and clicking Extensions from the bottom left.
+After you have finished the Installation, open Google Chrome and open the Extension Management page by navigating to ```chrome://extensions``` or by opening Settings and clicking Extensions from the bottom left.
 
 Enable Developer Mode by clicking the toggle switch next to Developer mode.
 
 Click the LOAD UNPACKED button and select the extension directory(```.../dist```).
 
-<img src="./demo/images/install_instructions.png" alt="Install Instructions">
 
 Voila! The extension is now installed and ready to be used!
 
 ### Adding to Firefox
-[(Back to top)](#table-of-contents)
 
 To install the developer version follow the steps below. To just use the extension download from [**addons.mozilla/nsfw-filter**](https://addons.mozilla.org/en-US/firefox/addon/nsfw-filter/)
 
@@ -72,7 +68,6 @@ After finishing [Installation](#installation), open Firefox and open the Debug A
 
 Click Load Temporary Add-on and select the ```manifest.json``` file from the ```.../dist``` directory.
 
-<img src="./demo/images/install_instructions_firefox.png" alt="Install Instructions">
 
 That's it! The extension is now ready to be used in Firefox!
 
@@ -85,13 +80,11 @@ When a page is loaded, the extension would check for images as you scroll across
 You can toggle(off/on) the extension from the ```chrome://extensions``` page in Chrome and ```about:debugging#/runtime/this-firefox``` in Firefox.
 
 # Development
-[(Back to top)](#table-of-contents)
 
 
 By default the code runs in production mode. This can be disabled during development by commenting out ```tf.enableProdMode ()``` in the ```/src/background.js``` file. This is enabled by default to improve the performance.
 
 ### Dependencies
-[(Back to top)](#table-of-contents)
 
 ```
 "@tensorflow/tfjs": "^2.0.1",
